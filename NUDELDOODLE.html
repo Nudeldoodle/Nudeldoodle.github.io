@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Startseite</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+	<script src="main.js"></script>
+</head>
+
+<style>
+	body
+	{
+		background-color: #3399FF;
+	}
+	table
+	{
+		position: absolute;
+		top: 40%;
+        left: 5%;
+		border: 1px solid black;
+		width:70%;
+        padding: 15px;
+		text-align: left;
+		background-color: lightblue;
+		margin-bottom: 10%;
+	}
+	footer
+	{
+		position: fixed;
+   		left: 0;
+    	bottom: 0;
+		width: 100%;
+		text-align: center;
+		font-size: 200%
+	}
+	div.warenkorb
+	{
+		position: fixed;
+	    bottom: 10%;
+		right: 0%;
+    	width: 200px;
+		border: 3px solid rgb(0, 0, 0);
+		transform: scale(2);
+		background-color: rgb(48, 182, 108);
+		
+	}
+	b
+	{
+		font-size: 200%;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		color: yellow;
+	}
+	i
+	{
+		font-size: 200%;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		color: yellow;
+	}
+	input[type=checkbox]
+	{
+  		transform: scale(3);
+	}
+	
+
+</style>
+
+<body>
+	<table class="tab1">
+			<tr>
+				<td></td>
+				<td ><b>Nudelsorte</b></td>
+				<td><b>Preis pro Kg</b></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><img src="Nudel1.png" alt="" border=3 height=300 width=300></img></td>
+				<td ><i>Farfalle</i></td>
+				<td><i>8.99 Euro</i></td>
+			  	<td><input id="c1" type="checkbox" onclick="warenkorbf('Farfalle: 8.99')"/></td>
+			</tr>
+			<tr>
+				<td><img src="Nudel2.png" alt="" border=3 height=300 width=300></img></td>
+				<td ><i>Bandnudeln</i></td>
+				<td><i>7.99 Euro</i></td>
+				<td><input id="c2" type="checkbox" onclick="warenkorbf('Bandnudeln: 7.99')"/></td>
+			</tr>
+			<tr>
+				<td><img src="Nudel3.png" alt="" border=3 height=300 width=300></img></td>
+				<td ><i>Gnocchi</i></td>
+				<td><i>10.99 Euro</i></td>
+				<td><input id="c3" type="checkbox" onclick="warenkorbf('Gnocchi: 10.99')"/></td>
+			</tr>
+			<tr>
+				<td><img src="Nudel4.png" alt="" border=3 height=300 width=300></img></td>
+				<td ><i>Makkaroni</i></td>
+				<td><i>8.99 Euro</i></td>
+				<td><input id="c4" type="checkbox" onclick="warenkorbf('Makkaroni: 8.99')"/></td>
+			</tr>
+			<tr>
+				<td><img src="Nudel5.png" alt="" border=3 height=300 width=300></img></td>
+				<td ><i>Spaghetti</i></td>
+				<td><i>6.99 Euro</i></td>
+				<td><input id="c5" type="checkbox" onclick="warenkorbf('Spaghetti: 6.99')"/></td>
+			</tr>
+			<tr><td><img src="Nudel6.png" alt="" border=3 height=300 width=300></img></td>
+				<td ><i>Penne rigate</i></td>
+				<td><i>11.99</i></td>
+				<td><input id="c6" type="checkbox" onclick="warenkorbf('Penne rigate: 11.99')"/></td></tr>
+	</table>
+	<img src="NUDELDOODLE.png" alt="" />
+	<hr />
+
+	<div class="warenkorb">
+		<!--textarea readonly name="testwarenkorb" id="txtWaren" cols="30" rows="10"></textarea>-->
+		<textarea readonly name="testwarenkorbend" id="txtWarenend" cols="30" rows="1">Preis: 0.00 Euro</textarea>
+		<input type="button" onclick="location.href='bestellfehler.html';" value="Bestellen" />
+	</div>
+
+	
+
+	<footer>
+			<div class="link1">
+				<a href="impressum.html">Impressum</a>
+			</div>
+
+			<div class="link2">
+				<a href="NUDELDOODLE.html" onclick="nachOben()" >Nach oben!</a>
+			</div>
+	</footer>
+</body>
+
+<script>
+	function nachOben()
+	{
+		document.body.scrollTop = 0; // For Safari
+    	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	}
+
+	function warenkorbf(i)
+	{
+		//var outputW = document.getElementById('txtWaren');
+		var outputWend = document.getElementById('txtWarenend');
+		//outputW.innerHTML = outputW.innerHTML + "\n" + i;
+		var zahlen = 0;
+		if(document.getElementById('c1').checked)
+		{
+			zahlen = zahlen.valueOf() + 8.99;
+		}
+		if(document.getElementById('c2').checked)
+		{
+			zahlen = zahlen.valueOf() + 7.99;
+		}
+		if(document.getElementById('c3').checked)
+		{
+			zahlen = zahlen.valueOf() + 10.99;
+		}
+		if(document.getElementById('c4').checked)
+		{
+			zahlen = zahlen.valueOf() + 8.99;
+		}
+		if(document.getElementById('c5').checked)
+		{
+			zahlen = zahlen.valueOf() + 6.99;
+		}
+		if(document.getElementById('c6').checked)
+		{
+			zahlen = zahlen.valueOf() + 11.99;
+		}
+		zahlen = zahlen.toFixed(2);
+		outputWend.innerHTML = zahlen;
+
+	}
+</script>
+
+
+
+</html>
