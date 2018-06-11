@@ -1,42 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>impressum</title>
-</head>
-
-<style>
-    body
-    {
-        background-color: #3399FF;
-        text-align: left;
-        font-family:arial, "lucida console", sans-serif;
-        color:#FFFFFF;
-        font-size: 200%
-    }
-    div.impressumText
-    {
-        position: fixed;
-        width: 30%;
-        left: 25%;
-        right: 35%;
-    }
-    div.mailIcon
-    {
-        position: fixed;
-        left: 10%;
-        top: 10%;
-        transform: scale(3);
-    }
-</style>
-<body>
-    <div class="impressumText">
-            Die Domain und die Infrastruktur dieser Website wurde von Github.com bereitgestellt.
-            Diese Website wurde als Leistung einer Klausur erstellt.
-            Die Bilder sind von https://www.pastaweb.de und die Icons von https://material.io/tools/icons/?style=baseline.
-    </div>
-    <div class="mailIcon">
+    <head>
+        <meta charset="utf-8" />
+        <title>impressum</title>
+        <link rel="stylesheet" type="text/css" href="styleImpress.css" />
+    </head>
+    <body>
+        <div class="impressumText">
+                Die Domain und die Infrastruktur dieser Website wurde von Github.com bereitgestellt.
+                Diese Website wurde als Leistung einer Klausur erstellt.
+                Die Bilder sind von <a href="https://www.pastaweb.de">Pastaweb.de</a> und die icons von <a href="https://material.io/tools/icons/?style=baseline">material.io</a>
+        <!--Beim Klicken auf das Icon kann eine Email gesendet werden.-->
+        <div class="mailIcon">
             <a href="mailto:nudeldoodle@gmail.com"><img src="Email.svg" alt="Email" /></a>
-    </div>
-</body>
+        </div>
+    </body>
 </html>
