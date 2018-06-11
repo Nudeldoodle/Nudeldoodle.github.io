@@ -1,0 +1,37 @@
+body
+{
+    background-color: #3399FF;
+    text-align: center;  
+}
+input
+{
+    width: 40%;
+    padding: 12px 20px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+div.achtungText
+{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    font-family:arial, "lucida console", sans-serif;
+    color:red;
+    border: 2px solid red;
+    background-color: white;
+}  
+div.fehlerText
+{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    font-family:arial, "lucida console", sans-serif;
+    color:#FFFFFF;
+}

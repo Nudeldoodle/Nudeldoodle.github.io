@@ -1,0 +1,22 @@
+body
+{
+    background-color: #3399FF;
+    text-align: left;
+    font-family:arial, "lucida console", sans-serif;
+    color:#FFFFFF;
+    font-size: 200%
+}
+div.impressumText
+{
+    position: fixed;
+    width: 30%;
+    left: 25%;
+    right: 35%;
+}
+div.mailIcon
+{
+    position: fixed;
+    left: 10%;
+    top: 10%;
+    transform: scale(3);
+}
